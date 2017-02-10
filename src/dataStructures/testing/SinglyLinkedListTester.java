@@ -54,5 +54,8 @@ public class SinglyLinkedListTester {
 		list.addLast(-4);
 		int removedInt = list.removeFirst();
 		assertEquals(5, removedInt);
+		
+		int first = list.first();
+		assertEquals(8, first);
 	}
 }

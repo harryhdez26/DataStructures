@@ -57,15 +57,16 @@ public class SinglyLinkedList<E> implements SLL<E>{
 		
 		E element = head.getElement();
 		
-		SinglyNode<E> temp = head.getNext();
+		Node<E> temp = (Node<E>) head.getNext();
 		head.setElement(null);
 		head.setNext(null);
-		head = (Node<E>) temp;
-		
-		if(size == 1)
-			tail = null;
+		head = temp;
 		
 		size--;
+		
+		if(isEmpty())
+			tail = null;
+		
 		return element;
 	}
 	
